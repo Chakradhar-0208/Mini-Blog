@@ -1,0 +1,283 @@
+/* @font-face { 
+    font-family: Geist;
+    src: url(Geist-Regular.woff2);
+} 
+
+*{
+    font-family: Geist;
+    margin: 0px;
+    padding: 0px; 
+    box-sizing: border-box;
+}
+
+ul.navbar li{
+    float: left;
+    text-align: center;
+    font-size: 120%;
+    margin: 8px;
+    padding: 8px;
+    color: white;
+    font-weight: 600;
+    position: relative;
+    top: 6.5px;
+    left: 75.5vw;
+    
+}
+li:hover{
+    color: rgba(195, 0, 0, 1);
+    background-color: white;
+    border-radius: 5px;
+}
+ul.navbar{
+    text-align: center;
+    list-style-type:none ;
+    background: rgba(195, 0, 0, 1);
+    width: 100vw;
+    height: 75px;
+    position: fixed;
+    box-shadow:0px 2px 10px #000 ;
+}
+
+.catalog{
+    position: absolute;
+    top: 100px;
+}
+
+.callus-button{
+    background: rgba(195, 0, 0, 1);
+    color: white;
+    position: fixed;
+    top: 90vh;
+    left: 90vw;
+    width: 120px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 150%;
+    box-shadow: 6px 6px 5px #aaaaaa;
+}
+    
+
+@font-face {
+    font-family: Geist;
+    src: url(Geist-Regular.woff2);
+}
+
+* {
+    font-family: Geist, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}*/
+
+body {
+    padding-top: 75px; /* to prevent content hiding behind navbar */
+}*
+
+ul.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+    background: rgba(195, 0, 0, 1);
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 10px #000;
+    padding-right: 5vw;
+    z-index: 1000;
+}
+
+ul.navbar li {
+    font-size: 1.1rem;
+    margin: 0 10px;
+    padding: 8px 12px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+ul.navbar li:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(250, 0, 0);
+    border-radius: 5px;
+}
+
+.catalog {
+    margin: 20px auto;
+    max-width: 90%;
+    padding: 20px;
+    text-align: center;
+}
+
+.callus-button {
+    background: rgba(195, 0, 0, 1);
+    color: white;
+    position: fixed;
+    bottom: 5vh;
+    right: 5vw;
+    width: 120px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    box-shadow: 6px 6px 5px #aaaaaa;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.callus-button:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    ul.navbar {
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    ul.navbar li {
+        font-size: 1rem;
+        margin: 4px 8px;
+    }
+
+    .callus-button {
+        font-size: 1rem;
+        width: 100px;
+        height: 45px;
+        right: 4vw;
+        bottom: 4vh;
+    }
+}
+
+@media (max-width: 480px) {
+    ul.navbar li {
+        font-size: 0.95rem;
+        padding: 6px 8px;
+    }
+
+    .callus-button {
+        font-size: 0.9rem;
+        width: 90px;
+        height: 40px;
+    }
+
+    .catalog {
+        padding: 10px;
+    }
+}
+@font-face {
+    font-family: Geist;
+    src: url(Fonts/Geist-Regular.woff2);
+}
+
+* {
+    font-family: Geist, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 15px;
+    padding-top: 75px; /* to prevent content hiding behind navbar */
+}
+
+ul.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+    background: rgba(195, 0, 0, 1);
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 10px #000;
+    padding-right: 5vw;
+    z-index: 1000;
+}
+
+ul.navbar li {
+    font-size: 1.1rem;
+    margin: 0 10px;
+    padding: 8px 12px;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+ul.navbar li:hover {
+    color: rgba(195, 0, 0, 1);
+    background-color: white;
+    border-radius: 5px;
+}
+
+.catalog {
+    margin: 20px auto;
+    max-width: 90%;
+    padding: 20px;
+    text-align: center;
+}
+
+.callus-button {
+    background: rgba(195, 0, 0, 1);
+    color: white;
+    position: fixed;
+    bottom: 5vh;
+    right: 5vw;
+    width: 120px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    box-shadow: 6px 6px 5px #aaaaaa;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.callus-button:hover {
+    transform: scale(1.05);
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    ul.navbar {
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    ul.navbar li {
+        font-size: 1rem;
+        margin: 4px 8px;
+    }
+
+    .callus-button {
+        font-size: 1rem;
+        width: 100px;
+        height: 45px;
+        right: 4vw;
+        bottom: 4vh;
+    }
+}
+
+@media (max-width: 480px) {
+    ul.navbar li {
+        font-size: 0.95rem;
+        padding: 6px 8px;
+    }
+
+    .callus-button {
+        font-size: 0.9rem;
+        width: 90px;
+        height: 40px;
+    }
+
+    .catalog {
+        padding: 10px;
+    }
+}
