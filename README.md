@@ -28,7 +28,7 @@ All protected endpoints require Bearer token in Authorization header:
 ```gherkin
 Authorization: Bearer <jwt_token>
 ```
-Admin endpoints require `role: "Admin"` in request payload
+Admin endpoints require role: "Admin" in request payload
 ```gherkin
 Middleware: requireRole("admin")
 ```
@@ -161,7 +161,7 @@ Logout user, Frontend should delete token
 ```gherkin
 Authorization: Bearer <jwt_token>
 ```
-
+* * *
 **Response: 200**
 ```json
 {
@@ -173,7 +173,6 @@ Authorization: Bearer <jwt_token>
 
 ### GET  `/api/v1/users`
 Health check route
-
 **Response: 200**
 ```
 User Management Route Active
@@ -192,7 +191,7 @@ Fetch user details (basic or detailed)
 **Response: 200** 
 ```json
 {
-    "user":{
+"user":{
 	"name":"string",
 	"email":"string",
 	"age":"number",
@@ -202,19 +201,19 @@ Fetch user details (basic or detailed)
 	"totalDistance":"number",
 	"totalJourneyTime":"number",
 	"longestTrip":{
-		"byDistance":{
-			"title":"string",
-			"distance":"number",
-			"duration":"number",
-		},
-		"byDuration":{
-			"title":"string",
-			"distance":"number",
-			"duration":"number",
-		}
+			"byDistance":{
+					"title":"string",
+					"distance":"number",
+					"duration":"number",
+				},
+				"byDuration":{
+					"title":"string",
+					"distance":"number",
+					"duration":"number",
+				}
 	}
-    },
-    "source":"string"
+},
+"source":"string"
 }
 ```
 
@@ -225,12 +224,13 @@ Gets all trips saved by current user
 
 ```json
 {
-  "savedTrips": 
-    [{
+  "savedTrips": [
+    {
       "_id": "string",
       "title": "string",
       "imageURLs": ["string"]
-    }]
+    }
+  ]
 }
 ```
 
@@ -241,7 +241,7 @@ Update user information
 **Request Body:**
 ```json
 {
-    "name": "string",
+	"name": "string",
     "email": "string",
     "phone": "string",
     "age": "number",
@@ -249,29 +249,29 @@ Update user information
     "interests":["string"],
     "travelType": "string",
     "preferences":{
-        "tripDifficulty":"string",
-        "budgetRange":"string",
-        "altitudeSickness":"boolean",
-        "tripSuggesions":"boolean",
-        "checkpointAlerts":"boolean",
-        "systemUpdates":"boolean"
-    }
-    "tripCount":"number"
+				"tripDifficulty":"string",
+				"budgetRange":"string",
+				"altitudeSickness":"boolean",
+				"tripSuggesions":"boolean",
+				"checkpointAlerts":"boolean",
+				"systemUpdates":"boolean"
+		}
+	  "tripCount":"number"
 }
 ```
 **Response: 200**
 
 ```json
 {
-    "message": "User updated successfully",
-    "user": {
-        "name": "string",
-        "email": "string",
-        "phone": "string",
-        "age": "number",
-        "gender": "string",
-        "role": "string"
-    }
+  "message": "User updated successfully",
+  "user": {
+    "name": "string",
+    "email": "string",
+    "phone": "string",
+    "age": "number",
+    "gender": "string",
+    "role": "string"
+  }
 }
 ```
 ### GET `api/v1/users/getProfileImage`
@@ -284,8 +284,8 @@ Retrieve a user's profile image
 **Response: 200**
 ```json
 {
-    "profileImage":"string",
-    "source":"string"
+	"profileImage":"string",
+	"source":"string"
 }
 ```
 
@@ -313,13 +313,13 @@ Delete a user by email
 **Request Body:**
 ```json
 {
-    "email":"string"
+	"email":"string"
 }
 ```
 **Response: 200**
 ```json
 {
-    "message": "User deleted successfully"
+  "message": "User deleted successfully"
 }
 ```
 
@@ -347,56 +347,56 @@ Get paginated list of trips with filtering
 
 ```json
 {
-  "response":{
-    "currentPage": "number",
-    "totalPages":"number",
-    "tripCount": "number",
-    "data":{
-      _id": "string",
-      "title": "string",
-      "description": "string",
-      "distance": "number",
-      "duration": "number",
-      "rating": "number",
-      "reviewCount": "number",
-      "imageURLs": ["string"],
-      "difficulty": "string",
-      "status": "string",
-      "startPoint": {
-        "name":"string",
-        "location":{
-          "type":"string",
-          "coordinates":["number"]	
-        }
-      },
-      "endPoint": {
-        "name":"string",
-        "location":{
-          "type":"string",
-          "coordinates":["number"]	
-        }
-      },
-      "estimatedCost": {
-        "car":{
-          "fuel":"number",
-          "tolls":"number",
-          "accomodation":"number",
-          "food":"number",
-          "parking":"number",
-          "total":"number"
-        },
-        "bike":{
-          "fuel":"number",
-          "tolls":"number",
-          "accomodation":"number",
-          "food":"number",
-          "parking":"number",
-          "total":"number"
-        }
-      }
-    }
-  },
-  "source":"string"
+	"response":{
+		"currentPage": "number",
+		"totalPages":"number",
+		"tripCount": "number",
+		"data":{
+			"_id": "string",
+			"title": "string",
+		    "description": "string",
+	        "distance": "number",
+	        "duration": "number",
+	        "rating": "number",
+	        "reviewCount": "number",
+		    "imageURLs": ["string"],
+	        "difficulty": "string",
+	        "status": "string",
+	        "startPoint": {
+				"name":"string",
+				"location":{
+					"type":"string",
+					"coordinates":["number"]	
+				}
+			 },
+	        "endPoint": {
+				"name":"string",
+				"location":{
+					"type":"string",
+					"coordinates":["number"]	
+				}
+			 },
+	        "estimatedCost": {
+				"car":{
+					"fuel":"number",
+					"tolls":"number",
+					"accomodation":"number",
+					"food":"number",
+					"parking":"number",
+					"total":"number"
+				},
+				"bike":{
+					"fuel":"number",
+					"tolls":"number",
+					"accomodation":"number",
+					"food":"number",
+					"parking":"number",
+					"total":"number"
+				}
+			}
+		}
+	},
+	"source":"string"
 }
 ```
 
@@ -493,7 +493,7 @@ Save a trip to current user's saved list
 **Response Body: 200**
 ```json
 {
-    "message":"Trip saved successfully"
+	"message":"Trip saved successfully"
 }
 ```
 
